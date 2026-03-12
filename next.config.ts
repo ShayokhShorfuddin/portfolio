@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  // TODO: Add markdown plugins here, as desired
+  options: {
+    remarkPlugins: ["remark-math"],
+    rehypePlugins: ["rehype-katex"],
+  },
 });
 
 // Merge MDX config with Next.js config
